@@ -42,7 +42,7 @@ steps:
   inputs:
     script: |
       dotnet ef migrations script -o "$(Build.ArtifactStagingDirectory)\migrate.sql" --project "$(ProyectoPath)"
-
+      # EF Core NO soporta generar scripts SQL idempotentes (-i) cuando la base de datos es SQLite
 - task: DotNetCoreCLI@2
   displayName: 'Publicar aplicación'
   inputs:
