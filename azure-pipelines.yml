@@ -39,7 +39,7 @@ steps:
   displayName: 'Print folder structure'
 
 - script: |
-    dotnet publish ./BookManagerAPI/BookManagerAPI.csproj \
+      dotnet publish ./BookManagerAPI.csproj \
       --configuration $(buildConfiguration) \
       --output $(outputDir) \
       --no-build
