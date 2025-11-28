@@ -37,7 +37,7 @@ steps:
   displayName: 'Run tests'
 
 - script: |
-    dotnet publish ./BookManager/BookManager.csproj \
+    dotnet publish ./BookManagerAPI/BookManagerAPI.csproj \
       --configuration $(buildConfiguration) \
       --output $(outputDir) \
       --no-build
