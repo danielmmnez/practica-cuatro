@@ -31,7 +31,7 @@ steps:
   displayName: 'Restore NuGet packages'
 
 - script: dotnet build --configuration $(buildConfiguration) --no-restore
-  displayName: 'Build solution't
+  displayName: 'Build solution'
 
 - script: |
     echo "Listando carpetas:"
