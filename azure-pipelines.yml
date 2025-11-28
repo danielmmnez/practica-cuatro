@@ -31,7 +31,12 @@ steps:
   displayName: 'Restore NuGet packages'
 
 - script: dotnet build --configuration $(buildConfiguration) --no-restore
-  displayName: 'Build solution'
+  displayName: 'Build solution't
+
+- script: |
+    echo "Listando carpetas:"
+    ls -R .
+  displayName: 'Print folder structure'
 
 - script: |
     dotnet publish ./BookManagerAPI/BookManagerAPI.csproj \
@@ -39,6 +44,7 @@ steps:
       --output $(outputDir) \
       --no-build
   displayName: 'Publish app to artifact folder'
+
 
 - task: PublishPipelineArtifact@1
   inputs:
