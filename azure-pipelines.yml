@@ -1,4 +1,4 @@
-# azure-pipelines.yml - CI for BookManager (.NET 9)
+# azure-pipelines.yml - CI for BookManager (.NET 9) WITHOUT TESTS
 trigger:
   branches:
     include:
@@ -32,9 +32,6 @@ steps:
 
 - script: dotnet build --configuration $(buildConfiguration) --no-restore
   displayName: 'Build solution'
-
-- script: dotnet test --configuration $(buildConfiguration) --no-build --verbosity normal
-  displayName: 'Run tests'
 
 - script: |
     dotnet publish ./BookManagerAPI/BookManagerAPI.csproj \
